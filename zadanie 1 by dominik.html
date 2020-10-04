@@ -1,0 +1,33 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="container">
+
+            <p><strong>Zadanie 1:</strong> Zdefiniuj wewn¹trz dokumentu HTML (nie w pliku zewnêtrznym) z zadaniem funkcjê sprawdz_z1(). Efektem dzia³ania funkcji powinno byæ wyskakuj¹ce okienko (alert) z informacj¹ czy wpisania w input o id input_z1 liczba jest wiêksza od 10. Je¿eli liczba bêdzie wiêksza od 10 komunikat ma mieæ treœæ "Warunek spe³niony!" w przeciwnym przypadku komunikat ma mieæ treœæ "B³¹d! Warunek niespe³niony!". </p>
+
+
+
+            <div class="z1">
+                <div>Wiek : <input type="text" name="input_z1" id="input_z1" value="5" />
+                    <input type="button" name="button_z1" id="button_z1" value="SprawdŸ liczbê" onclick="sprawdz_z1()"/>
+                </div>
+            </div>
+        </div>
+        <script>
+            var input = document.querySelector("#input_z1");
+            var btn = document.querySelector("#button_z1");
+
+
+            btn.addEventListener("click", function(){
+  
+                if(input.value > 10) {
+                    alert("Warunek spe³niony!");
+                } else {
+
+                    alert("B³¹d");   
+                }
+            } ,false);
+        </script>
+    </body>
+</html>
