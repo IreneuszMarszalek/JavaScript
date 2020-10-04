@@ -24,15 +24,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row no-gutters mx-3 pb-2">
-               
+            <div class="row no-gutters pb-2">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <button class="btn btn-outline-secondary" type="button" name="button_z1" id="button_z1" value="Sprawdź liczbę" onclick="sprawdz_z1()" width="10px">Button</button>
+                        <button class="btn btn-outline-secondary" type="button" name="button_z1" id="button_z1" value="Sprawdź liczbę"  width="10px">Button</button>
                     </div>
                     <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" id="input_z1" value="Wpisz wiek:" name="input_z1">   
                 </div>
-                
             </div>        
         </div>>
         
@@ -40,16 +38,14 @@
             var input = document.querySelector("#input_z1");
             var btn = document.querySelector("#button_z1");
 
-
-            btn.addEventListener("click", function(){
-  
-                if(input.value > 10) {
-                    alert("Warunek spe�niony!");
-                } else {
-
-                    alert("B��d");   
+            function sprawdz_z1(x){
+                if(x > 10){
+                   alert("Warunek spełniony!");
+               }else{
+                    alert("Błąd! Warunek niespełniony!"); 
                 }
-            } ,false);
+            }
+            btn.addEventListener("click", function(){sprawdz_z1(input.value);} ,false);
         </script>
 
         <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
